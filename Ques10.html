@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="root">Hey there!!</div>
+</body>
+</html>
+<script>
+    let div= document.getElementById("container");
+    let para=document.createElement("p");
+    para.innerText="This is created by DOM";
+    div.appendChild(para);
+</script>
+<script>
+    let element= React.createElement("p",null,"This is created by react");
+    let root= ReactDOM.createRoot(document.getElementById("root"));
+    root.render(element);
+</script>
